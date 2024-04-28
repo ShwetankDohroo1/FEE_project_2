@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="patient.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body class="flex bg-blue-100 justify-center">
+  <div class="screen-1">
+    <div class="img">
+      <img src="./src/assets/doct_sign2.png" width="300" height="250" alt="">
+    </div>
+    <label for="email">Email Address</label>
+    <div class="email">
+      <div class="sec-2">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="email" name="email" placeholder="Username@gmail.com">
+      </div>
+    </div>
+    <label for="password">Password</label>
+    <div class="password">
+      <div class="sec-2">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input class="pas" type="password" name="password" placeholder="············">
+        <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+      </div>
+    </div>
+    <button class="login glow-on-hover" onclick="back()">Login</button>
+    <div class="footer">
+      <span>Sign up</span>
+      <span onclick="forgot()">Forgot Password?</span>
+    </div>
+  </div>
+
+  <script>
+    function back() {
+      window.location.href = 'index.html';
+    }
+    function forgot(){
+      alert('Canot change the password')
+    }
+  </script>
+</body>
+
+</html>

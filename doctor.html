@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <div class="img_contain">
+                    <img src="src/assets/doctsign.png" class="img">
+                </div>
+                <form class="login" onsubmit="return checkFileUpload()">
+                    <div class="login__field file-upload">
+                        <label for="pdfUpload" class="login__label">Upload Degree:-</label>
+                        <input type="file" id="pdfUpload" class="login__input" accept=".pdf" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="User name / Email" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password" required>
+                    </div>
+                    <button type="submit" onclick="back()" class="button login__submit glow-on-hover">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function back() {
+            event.preventDefault();
+            console.log("Redirecting to index.html");
+            window.location.href = 'index.html';
+        }
+        function checkFileUpload() {
+            // var fileInput = document.getElementById('pdfUpload');
+            // if (fileInput.files.length === 0) {
+            //     alert('Please upload a PDF file.');
+            //     return false;
+            // }
+            // return true;
+        }
+
+    </script>
+</body>
+
+</html>

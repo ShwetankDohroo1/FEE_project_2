@@ -1,0 +1,223 @@
+/* Define variables */
+:root {
+    --p: #EBF8FF;
+    --s: hsl(233, 36%, 38%);
+    --color: #00C6AA;
+    /* Define the base color */
+    --hover: #008D7D;
+    /* Define the hover color */
+}
+
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color);
+    /* Use the base color */
+    height: 100vh;
+    font-size: 20px;
+}
+
+.screen-1 {
+    background: var(--p);
+    padding: 2em;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0 0 2em rgb(0, 0, 0);
+    gap: 1em;
+    animation: patient 2s ease-in-out;
+}
+
+@keyframes patient {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    margin: 10%;
+}
+
+.email,
+.password {
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 2em hsl(231, 62%, 94%);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 20px;
+    color: hsl(0, 0%, 30%);
+}
+
+.email input,
+.password input {
+    outline: none;
+    border: none;
+}
+
+.email input::placeholder,
+.password input::placeholder {
+    color: hsl(0, 0%, 0%);
+    font-size: 0.9em;
+}
+
+.email ion-icon,
+.password ion-icon {
+    color: hsl(0, 0%, 30%);
+    margin-bottom: -.2em;
+}
+
+.password .show-hide {
+    margin-right: -5em;
+}
+
+.login {
+    padding: 1em;
+    background: var(--s);
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 30px;
+
+    /* Box shadow animation */
+    box-shadow:
+        0.3em 0.3em 0 0 var(--color),
+        inset 0.3em 0.3em 0 0 var(--color);
+
+    transition: box-shadow 0.4s;
+}
+
+/* Hover effect */
+.login:hover,
+.login:focus {
+    box-shadow:
+        0 0 0 0 var(--hover),
+        inset 6em 3.5em 0 0 var(--hover);
+}
+
+.footer {
+    display: flex;
+    font-size: 0.7em;
+    color: hsl(0, 0%, 37%);
+    gap: 14em;
+    padding-bottom: 10em;
+    font-size: large;
+}
+
+.footer span {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.glow-on-hover {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .screen-1{
+        height: 700px;
+    }
+  }
+@media only screen and (max-width:600px) {
+    .screen-1{
+        width: 250px;
+        height: 500px;
+    }
+    .img{
+        margin-top: 50%;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    .footer{
+        white-space: nowrap;
+        gap: 5rem;
+    }
+  }

@@ -1,0 +1,71 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.main2 {
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  background-color:aliceblue;
+  margin: 10px;
+  align-items: center;
+}
+.add-doctor-btn{
+  border-radius: 8px;
+  color: black;
+  border: 1px solid transparent;
+  padding: 0.5%;
+  font-size: large  ;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  height: 50%;
+}
+.doct_info{
+  display: flex;
+}
+.docts{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.heading2 {
+  margin-top: 20px;
+}
+.appointments{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+.appointments_info {
+  width: 29%;
+  padding: 10px;
+  margin: 2%;
+  box-sizing: border-box;
+  border: 1px solid 
+}
+.doct_name_input{
+  border: 1px solid transparent;
+  padding: 0.5%;
+  border-radius: 10px;
+}
+.select_field{
+  padding: 0.5%;
+  border-radius: 10px;
+  border: 1px solid transparent; 
+}
